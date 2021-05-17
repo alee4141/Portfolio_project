@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="styles.css">
 
     <title>Contact Me</title>
@@ -18,60 +19,69 @@
 
     <header class="jumbotron jumbotron-fluid">
         <div>
-
+            <img src="#" class="d-flex img-thumbnail">
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="Index.html"><img src="#" height="30" width="30"></a>
+            <a class="navbar-brand" href="Index.html"><i class="fab fa-empire fa-lg"></i></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#aleeNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="aleeNavbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="Index.html"><li class="fa fa-home fa-lg"></li> Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about_me.html"><li class="fa fa-info fa-lg"></li> About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="hire_me.html"><li class="fa fa-address-card fa-lg"></li> Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gear.html"><li class="fa fa-laptop fa-lg"></li> My Gear</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about_me.html"><i class="fa fa-info fa-lg"></i> About</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="hire_me.html"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gear.html"><i class="fa fa-laptop fa-lg"></i> My Gear</a></li>
                 </ul>
+                <span class="navbar-text ml-auto">
+                    <a role="button" data-toggle="modal" data-target="#contactModal"><i class="fa fa-envelope-open-text fa-lg"></i> Contact me</a>
+                </span>
             </div>
         </div>
     </nav>
 
-    <div>
-        <div>
-            <h2>Request my services</h2>
-            <hr/>
+
+    <div id="contactModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h3 class="modal-title">Contact Me</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="yourName">Your Name</label>
+                                    <input type="text" class="form-control form-control-sm" id="yourName"
+                                        name="yourName" placeholder="Enter your name">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="email">Email</label>
+                                    <input type="email" class="form-control form-control-sm" id="email" name="email"
+                                        placeholder="Enter your email">
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label">Requesting my services</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <form>
-                <div>
-                    <label>First Name</label>
-                    <div>
-                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
-                    </div>
-                </div>
-                <div>
-                    <label>Last Name</label>
-                    <div>
-                        <input>
-                    </div>
-                </div>
-                <div>
-                    <label>Email</label>
-                    <div>
-                        <input>
-                    </div>
-                </div>
-                <div>
-                    <label>Message</label>
-                    <div>
-                        <textarea></textarea>
-                    </div>
-                </div>
-            </form>
-        </div>
+    </div>
+
+    <div class="container">
+        <h3>hello</h1>
+        <p></p>
     </div>
 
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
